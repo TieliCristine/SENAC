@@ -33,6 +33,7 @@ public class ProjMaquinaDeLavar {
         volts = teclado.nextInt();
         System.out.print("Quantidade kgs:  ");
         peso = teclado.nextInt();
+        //Variável de duração de cada estágio para futuramente acrescentar tempo de processamento nos estágios:
         System.out.print("Duracao do Estagio 1 - Lavacao Pesada:  ");
         duraEstagio1 = teclado.nextInt();
         System.out.print("Duracao do Estagio 2 - Lavacao Normal:  ");
