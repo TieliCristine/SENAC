@@ -4,8 +4,8 @@ public class ProjMaquinaDeLavar {
     static Scanner teclado = new Scanner(System.in);
 
     //variáveis utilizadas:
-    static int peso, volts, c, codMenu, estagioInicial, duraEstagio1, duraEstagio2, duraEstagio3, duraEstagio4, duraEstagio5;
-    static String nome, modelo;
+    static int peso, c, codMenu, estagioInicial, duraEstagio1, duraEstagio2, duraEstagio3, duraEstagio4, duraEstagio5;
+    static String nome, modelo, volts;
 
     //Funções:
     public static void menuPrincipal() {
@@ -30,7 +30,7 @@ public class ProjMaquinaDeLavar {
         System.out.print("Nome:  ");
         nome = teclado.nextLine();
         System.out.print("Voltagem (220V ou 110V ou 220/110V:  ");
-        volts = teclado.nextInt();
+        volts = teclado.nextLine();
         System.out.print("Quantidade kgs:  ");
         peso = teclado.nextInt();
         //Variável de duração de cada estágio para futuramente acrescentar tempo de processamento nos estágios:
