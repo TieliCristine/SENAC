@@ -18,6 +18,7 @@ public class ProjMaquinaDeLavar {
         System.out.println("0 - Sair  ");
         System.out.println("Digite o codigo:  ");
         codMenu = teclado.nextInt();
+
     }
     public static void menuConfiguracao() throws InterruptedException {
         new Thread().sleep(2000);
@@ -163,7 +164,7 @@ public class ProjMaquinaDeLavar {
                 codMenu = 0;
             } else if (codMenu == 2) {
                 System.out.println("Erro: Primeiro configure a maquina de lavar ");
-                new Thread().sleep(3000);
+                new Thread().sleep(2000);
             }
         } while (codMenu != 0);
         System.out.println("Simulacao Finalizada");
