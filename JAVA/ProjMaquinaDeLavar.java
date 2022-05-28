@@ -50,7 +50,7 @@ public class ProjMaquinaDeLavar {
         duraEstagio2 = teclado.nextInt();
         tempo2 = duraEstagio2 * 1000;
 
-        System.out.print("Duracao do Estagio 3 - Lavacao Rapida:  ");
+        System.out.print("Duracao do Estagio 3 - Lavacao Leve:  ");
         duraEstagio3 = teclado.nextInt();
         tempo3 = duraEstagio3 * 1000;
 
@@ -92,25 +92,25 @@ public class ProjMaquinaDeLavar {
         }
     public static void estagio2() throws InterruptedException {
             for (c = 20; c <= 100; c += 20) {
-                System.out.println("Estagio 2 - Em Lavacao Pesada: " + c + " % ");
+                System.out.println("Estagio 2 - Em Lavacao Normal: " + c + " % ");
                 new Thread().sleep(tempo2);
             }
         }
     public static void estagio3() throws InterruptedException {
             for (c = 20; c <= 100; c += 20) {
-                System.out.println("Estagio 3 - Em Lavacao Pesada: " + c + " % ");
+                System.out.println("Estagio 3 - Em Lavacao Leve: " + c + " % ");
                 new Thread().sleep(tempo3);
             }
         }
     public static void estagio4() throws InterruptedException {
             for (c = 20; c <= 100; c += 20) {
-                System.out.println("Estagio 4 - Em Lavacao Pesada: " + c + " % ");
+                System.out.println("Estagio 4 - Enxague: " + c + " % ");
                 new Thread().sleep(tempo4);
             }
         }
     public static void estagio5() throws InterruptedException {
             for (c = 20; c <= 100; c += 20) {
-                System.out.println("Estagio 5 - Em Lavacao Pesada: " + c + " % ");
+                System.out.println("Estagio 5 - Centrifuga: " + c + " % ");
                 new Thread().sleep(tempo5);
             }
         }
