@@ -44,23 +44,23 @@ public class ProjMaquinaDeLavar {
 
         System.out.print("Duracao do Estagio 1 - Lavacao Pesada:  ");
         duraEstagio1 = teclado.nextInt();
-        tempo1 = duraEstagio1 * 1000;
+        tempo1 = (duraEstagio1 * 1000)/5;
 
         System.out.print("Duracao do Estagio 2 - Lavacao Normal:  ");
         duraEstagio2 = teclado.nextInt();
-        tempo2 = duraEstagio2 * 1000;
+        tempo2 = (duraEstagio2 * 1000)/5;
 
         System.out.print("Duracao do Estagio 3 - Lavacao Leve:  ");
         duraEstagio3 = teclado.nextInt();
-        tempo3 = duraEstagio3 * 1000;
+        tempo3 = (duraEstagio3 * 1000)/5;
 
         System.out.print("Duracao do Estagio 4 - Enxague:  ");
         duraEstagio4 = teclado.nextInt();
-        tempo4 = duraEstagio4 * 1000;
+        tempo4 = (duraEstagio4 * 1000)/5;
 
         System.out.print("Duracao do Estagio 5 - Centrifuga:  ");
         duraEstagio5 = teclado.nextInt();
-        tempo5 = duraEstagio5 * 1000;
+        tempo5 = (duraEstagio5 * 1000)/5;
     }
     public static void menuSimulacao() throws InterruptedException {
         new Thread().sleep(2000);
