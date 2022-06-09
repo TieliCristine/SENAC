@@ -21,7 +21,7 @@ public class Recepcao {
     static String[] cidade = new String[20];
     static String[] uf = new String[20];
     static int conjuntoLinha;
-    static int cLinha = 0;
+    static int cLinha = 1;
     static int cColuna = 0;
     static int cc = 1;
 
@@ -33,6 +33,51 @@ public class Recepcao {
     static String[] qtdPessoas = new String[20];
     static String[] vlrDiaria = new String[20];
     static String[] qrtoFumante = new String[20];
+
+    public static void cadastroCliente() {
+        System.out.println("Nome do Cliente: ");
+        nome[cLinha] = "Nome: " + teclado.nextLine();
+        nome[cLinha] = "Nome: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = nome[cLinha];
+        cColuna++;
+
+        System.out.println("CPF: ");
+        cpf[cLinha] = "CPF: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = cpf[cLinha];
+        cColuna++;
+
+        System.out.println("Data de Nasc.:");
+        dataNasc[cLinha] = "Data de Nasc.: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = dataNasc[cLinha];
+        cColuna++;
+
+        System.out.println("Telefone: ");
+        telefone[cLinha] = "Telefone: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = telefone[cLinha];
+        cColuna++;
+
+        System.out.println("E-mail: ");
+        email[cLinha] = "E-mail: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = email[cLinha];
+        cColuna++;
+
+        System.out.println("Cidade: ");
+        cidade[cLinha] = "Cidade: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = cidade[cLinha];
+        cColuna++;
+
+        System.out.println("UF: ");
+        uf[cLinha] = "UF: " + teclado.nextLine();
+        cliente[cLinha][cColuna] = uf[cLinha];
+        cColuna++;
+
+        System.out.println("Fumante? ");
+        fumante[cLinha] = "Fumante? " + teclado.nextLine();
+        cliente[cLinha][cColuna] = fumante[cLinha];
+        cLinha++;
+        cColuna = 0;
+        conjuntoLinha = cLinha;
+    }
 
     public static void main(String[] args) {
 
@@ -68,53 +113,14 @@ public class Recepcao {
                     acaoCliente = teclado.nextInt();
                     switch (acaoCliente) {
                         case 1:  // Cadastrar cliente
-                            System.out.println("Nome do Cliente: ");
-                            nome[cLinha] = "Nome: " + teclado.nextLine();
-                            nome[cLinha] = "Nome: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = nome[cLinha];
-                            cColuna++;
 
-                            System.out.println("CPF: ");
-                            cpf[cLinha] = "CPF: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = cpf[cLinha];
-                            cColuna++;
+                            cadastroCliente();
 
-                            System.out.println("Data de Nasc.:");
-                            dataNasc[cLinha] = "Data de Nasc.: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = dataNasc[cLinha];
-                            cColuna++;
-
-                            System.out.println("Telefone: ");
-                            telefone[cLinha] = "Telefone: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = telefone[cLinha];
-                            cColuna++;
-
-                            System.out.println("E-mail: ");
-                            email[cLinha] = "E-mail: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = email[cLinha];
-                            cColuna++;
-
-                            System.out.println("Cidade: ");
-                            cidade[cLinha] = "Cidade: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = cidade[cLinha];
-                            cColuna++;
-
-                            System.out.println("UF: ");
-                            uf[cLinha] = "UF: " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = uf[cLinha];
-                            cColuna++;
-
-                            System.out.println("Fumante? ");
-                            fumante[cLinha] = "Fumante? " + teclado.nextLine();
-                            cliente[cLinha][cColuna] = fumante[cLinha];
-                            cLinha++;
-                            cColuna = 0;
-                            conjuntoLinha = cLinha;
                             break;
                         case 2: // Editar cliente
                             System.out.println("Lista de Clientes:");
-                            System.out.println();
-                            for (cLinha = 0; cLinha < conjuntoLinha; cLinha++) {
+                            System.out.println(); cc = 1;
+                            for (cLinha = 1; cLinha < conjuntoLinha; cLinha++) {
                                 System.out.println();
                                 System.out.println("Cliente " + cc + ": ");
                                 cc++;
@@ -122,11 +128,19 @@ public class Recepcao {
                                     System.out.println(cliente[cLinha][cColuna]);
                                 }
                             }
+                            System.out.println("Digite o codigo do cliente que deseja editar: ");
+                            cLinha = teclado.nextInt();
+                            if (cliente[cLinha][0] == null ) {
+                                System.out.println("Cadastro inexistente");
+                            } else {
+                                System.out.println(cliente[cLinha][0]);
+                                cadastroCliente();
+                            }
                             break;
                         case 3: // Listar cliente
                             System.out.println("Lista de Clientes:");
-                            System.out.println();
-                            for (cLinha = 0; cLinha < conjuntoLinha; cLinha++) {
+                            System.out.println(); cc = 1;
+                            for (cLinha = 1; cLinha < conjuntoLinha; cLinha++) {
                                 System.out.println();
                                 System.out.println("Cliente " + cc + ": ");
                                 System.out.println(); cc++;
