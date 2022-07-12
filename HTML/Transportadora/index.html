@@ -99,7 +99,7 @@
             <footer> <!--rodapé da sessão-->
                 <a href="#" class="botao saiba_mais_rastreamento">
                     Saiba mais >>
-                    <!--o # substituímos pelo link que clicando no 'saiba mais' nos direcione para alum lugar-->
+                    <!-- O "#" substituímos pelo link que clicando no 'saiba mais' nos direcione para alum lugar-->
                 </a>
             </footer>
         </section>
@@ -109,47 +109,107 @@
                     <span class="material-symbols-outlined">smartphone</span>Smartphone
                 </h1>
                 <p>
-                    Baixe o aplicativo e visualize onde sua mercadoria está em tempo
+                    Baixe o aplicativo e visualize onde a sua mercadoria está em tempo
                     real. Disponível para Windows Phone, Android e Iphone.
                 </p>
             </article>
             <footer> <!--rodapé da sessão-->
                 <a href="#" class="botao saiba_mais_smartphone">
                     Saiba mais >>
-                    <!--o # substituímos pelo link que clicando no 'saiba mais' nos direcione para alum lugar-->
+                    <!-- O "#" substituímos pelo link que clicando no 'saiba mais' nos direcione para alum lugar-->
                 </a>
             </footer>
         </section>
     </main>
+    <!-- Sessão de comentários clientes satisfeitos -->
     <section id="sectionCliente">
         <h1>Conheça alguns de nossos clientes</h1>
         <div id="conteudoCliente">
             <article>
                 <figure>
                     <img src="mulher_feliz.png" alt="Cliente satisfeito">
-                    <caption>
-                        Texto do cliente
-                    </caption>
+                    <figcaption>
+                        "Baixei o aplicativo e pude acompanhar as minhas mercadorias em tempo real. Adorei!!"
+                    </figcaption>
                 </figure>
             </article>
             <article>
                 <figure>
                     <img src="feliz.png" alt="Cliente satisfeito">
                     <caption>
-                        Texto do cliente
+                        "Precisavamos levar os bens da família para outro país e encontramos a melhor solução."
                     </caption>
                 </figure>
             </article>
             <article>
                 <figure>
                     <img src="homem_feliz.png" alt="Cliente satisfeito">
-                    <caption>
-                        Texto do cliente
-                    </caption>
+                    <figcaption class="text-cliente">
+                        "Após fechar uma grande venda consegui entregar os meus produtos sem danos e com segurança!"
+
+                    </figcaption>
                 </figure>
             </article>
         </div>
     </section>
-    <!-- fim conteudo -->
+    <!--fim conteudo-->
+    <!--início do rodapé-->
+    <div id="containerRodape">
+        <footer id="rodape">
+            <nav id="rodape_nav">
+                <h2 class="rodape_title">Navegação</h2>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="empresa.html">Empresa</a></li>
+                    <li><a href="servico.html">Serviço</a></li>
+                    <li><a href="localizacao.html">Localização</a></li>
+                    <li><a href="cadastro.html">Cadastro</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+            <div id="rodape_comentarios">
+                <h2 class="rodape_title">@Comentários</h2>
+                <ul>
+                    <li>
+                        <span>Ótimo atendimento, entrega rápida e pontual.</span>
+                        <a href="#">Mais...</a>
+                    </li>
+                    <li>
+                        <span>O produto chegou antes do previsto.</span>
+                        <a href="#">Mais...</a>
+                    </li>
+                    <li>
+                        <span>Atendimento fantástico, parabéns e que continue assim.</span>
+                        <a href="#">Mais...</a>
+                    </li>
+                    <li>
+                        <span>Parabéns! Funcionários muito bem treinados e educados,
+                            sem dizer a pontualidade de entrega.</span>
+                        <a href="#">Mais...</a>
+                    </li>
+                </ul>
+            </div>
+            <!--form é uma tag obrigatória para formulário-->
+            <div id="caixa_formulario">
+                <form action="" method="post">
+                    <h2 class="rodape_title">Contato</h2>
+
+                    <label>Nome:</label>
+                    <input type="text" name="nome">
+
+                    <label>E-mail:</label>
+                    <input type="email" name="email">
+
+                    <label>Comentário:</label>
+                    <textarea name="comentario" maxlength="250"> </textarea>
+                    <div id="botoes">
+                        <input type="submit" value="Enviar">
+                        <input type="reset" value="Limpar">
+                    </div>
+                </form>
+            </div>
+        </footer>
+    </div>
+    <!--fim do rodapé-->
 </body>
 </html>

@@ -9,7 +9,6 @@ body{
 div#topo{
     width: 100%;
     height: auto;
-    border: 1px solid red;
 }
 header{
     width: 980px;
@@ -20,10 +19,9 @@ header{
     display: grid;
     grid-template-columns: 350px 630px;
 
-    border: 1px solid red;
 }
 header div{
-    border: 1px solid red;
+
 }
 header #header-contato{
     text-align: right;
@@ -71,7 +69,6 @@ nav{
     margin-left: auto;
     margin-right: auto;
     padding: 0;
-    border: 1px solid red;
 }
 nav ul{ /*lista de links do menu*/
     margin: 0;
@@ -82,7 +79,6 @@ nav ul{ /*lista de links do menu*/
 nav li{ /*links do menu*/
     float: left; /*flutuar a esquerda até preencher a tela, não cabe mais vai pra baixo (= inline block)*/
     margin: 0 30px 0 0;
-    border: 1px solid red;
 }
 nav li a{
     display: block;
@@ -92,6 +88,7 @@ nav li a{
 nav.home li.link_home a, nav a:hover{ /*cor do link quando passa o mouse*/
     color: #919191;
 }
+
 /*main*/
 main{
     width: 980px;
@@ -107,8 +104,6 @@ main{
     flex-wrap: wrap; /*   [nowrap  |  wrap  |  wrap-reverse]  */
     row-gap: 10px;
     column-gap: 40px;
-
-    border: 1px solid red;
 }
 .sectionMain{
     width: 190px;
@@ -181,7 +176,7 @@ a.botao{
 }
 #sectionCliente{
     width: 100%;
-    height: 320%;
+    height: 320px;
     background-color: #FFFFFF;
 }
 #sectionCliente h1{
@@ -189,7 +184,6 @@ a.botao{
     padding-top: 10px;
 }
 #conteudoCliente{
-    border: 1px solid red;
     height: 200px;
     width: 750px;
     margin-left: auto;
@@ -198,11 +192,85 @@ a.botao{
     grid-template-columns: 250px 250px 250px;
 }
 #conteudoCliente article{
-    border: 4px solid #919191;
     margin: 10px;
     border-radius: 10px;
 }
 #conteudoCliente img{
     width: 100%;
     height: 100%;
+    border-radius: 5px;
+    border: solid #919191 5px;
 }
+#conteudoCliente.text-cliente{
+    text-align: justify;
+    padding-top: 10px;
+    display: block;
+}
+#containerRodape{
+    width: 100%;
+    height: 350px;
+}
+#rodape{
+    width: 980px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid red 1px;
+}
+#rodape_comentarios,
+#rodape_nav,
+#caixa_formulario{
+    width: 300px;
+    height: 300px;
+    float: left;
+    margin: 10px;
+}
+.rodape_title{
+    text-align: center;
+}
+#rodape_nav li a{
+    height: 25px;
+}
+#rodape_comentarios li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+#caixa_formulario label{
+    display: block;
+    margin-top: 10px;
+}
+#caixa_formulario input{
+    height: 25px;
+}
+#caixa_formulario textarea{
+    height: 100px;
+    resize: none;
+}
+#caixa_formulario input, #caixa_formulario textarea{
+    border-radius: 5px;
+    padding-left: 5px;
+    color: #FFF;
+    background-color: #333333;
+    border: 1px solid #666666;
+}
+#botoes{
+    display: flex;
+    margin-top: 10px;
+}
+#caixa_formulario input[type=submit], #caixa_formulario input[type=reset]{
+    background-color: #FF9900;
+    margin-left: 10px;
+    cursor: pointer;
+    color: #232323;
+}
+#rodape_nav li{
+    display: contents;
+    margin: 5px 0;
+}
+#rodape_nav li a{
+    padding: 5px 0;
+}
+
+/*Usa um . para formatar classe, usa um # para formatar um ID ou o
+nome de um elemento para formatar aquele elemento, mas se estiver usando o mesmo
+elemento em mais de um lugar, vai formatar todos! */
