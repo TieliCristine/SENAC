@@ -9,17 +9,11 @@ public class exercicio02 {
         numero[2] = 9;
         numero[3] = 12;
         int c;
-        int totalPares = 0;
+        int atual = 0;
 
         for (c = 0; c < numero.length; c++) {
-            int atual = numero[c];
-            int resto = atual % 2;
-
-            if (resto == 0 && atual > 0) {
-                totalPares++;
-                System.out.println("Pares: " + atual);
-            }
+            atual += numero[c];
         }
-        System.out.println("Total pares: " + totalPares);
+        System.out.println("Soma dos elementos: " + atual);
     }
 }
