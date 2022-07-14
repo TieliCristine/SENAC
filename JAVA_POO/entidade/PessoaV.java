@@ -1,10 +1,13 @@
 package entidade;
 
+import java.util.Calendar;
+import java.util.Date;
+
 public class PessoaV {
     //Atributos
     private String cpf;
     private String nome;
-    private String dataNascimento;
+    private Date dataNascimento;
     private double alturaEmMetros;
     private char sexo;
 
@@ -18,7 +21,7 @@ public class PessoaV {
         this.cpf = cpf;
     }
 
-    public PessoaV(String cpf, String name, String dataNascimento, double alturaEmMetros, char sexo) {
+    public PessoaV(String cpf, String name, Date dataNascimento, double alturaEmMetros, char sexo) {
         super();
         this.cpf = cpf;
         this.nome = name;
@@ -32,8 +35,12 @@ public class PessoaV {
         int idade = 0;
 
         //Assumir dd/MM/yyyy
-        String anoNascimento = this.dataNascimento.substring(6);
-        idade = anoAtual - Integer.valueOf(anoNascimento);
+
+        Calendar cal = Calendar.getInstance();
+        cal.setTime(this.dataNascimento);
+
+        int anoNascimento = cal.get(Calendar.YEAR);
+        idade = anoAtual - anoNascimento;
 
         return idade;
     }
@@ -47,11 +54,11 @@ public class PessoaV {
         this.nome = novoNome;
     }
 
-    public String getDataNascimento() {
+    public Date getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(Date dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
 

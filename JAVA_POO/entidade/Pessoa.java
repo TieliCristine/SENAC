@@ -1,18 +1,36 @@
 package entidade;
 
-import java.util.ArrayList;
+public abstract class Pessoa {
 
-public class Pessoa {
     private String nome;
     private boolean adimplente;
-    private ArrayList<String> conta = new ArrayList<>();
 
-    public Pessoa(){
+    public Pessoa() {
         super();
+        this.adimplente = true;
     }
-    public Pessoa(String nome, boolean adimplente, ArrayList<String> conta) {
+
+    public Pessoa(String nome) {
+        super();
         this.nome = nome;
+        this.adimplente = true;
+    }
+
+    public abstract String getApelido();
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public boolean isAdimplente() {
+        return adimplente;
+    }
+
+    public void setAdimplente(boolean adimplente) {
         this.adimplente = adimplente;
-        this.conta = conta;
     }
 }
